@@ -1,1 +1,1 @@
-print('Test push and push request')
+print('Um novo push pras brabíssimas do Katie nesse minicurso txop!')
