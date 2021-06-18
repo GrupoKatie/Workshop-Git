@@ -6,3 +6,5 @@ Adicionada nova feature.
 Adicionada nova release.
 
 Adicionado novo hotfix.
+
+Adicionado segundo hotfix.
