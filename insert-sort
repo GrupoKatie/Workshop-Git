@@ -1,0 +1,45 @@
+/* C 
+
+void insertionSort1(int n, int arr_count, int* arr) {
+    int i, j, last;
+    last = arr[n-1];
+    i = n-2;
+    while (i>=0 && arr[i]>last){
+        arr[i+1] = arr[i];
+        for (j=0; j<n; j++) printf("%d ", arr[j]);
+        printf("\n");    
+        i--;
+    }
+    if (arr[i]<last){
+        arr[i+1] = last;
+        for (j=0; j<n; j++) printf("%d ", arr[j]);
+        printf("\n");
+    }
+
+}
+
+/* PYTHON
+
+def insertsort(arr):
+ 
+    if len(arr)<=1:
+        return arr
+
+    for i in range(1, len(arr)): 
+        j = i-1
+        key = arr[i]
+        
+        while j>=0 and key<arr[j]:
+            arr[j+1] = arr[j]
+            j = j-1
+            arr[j+1] = key
+ 
+    return arr
+
+
+if __name__ == '__main__':
+    arr = input()
+    lista = list(arr)
+    print(insertsort(lista))
+    
+*/
