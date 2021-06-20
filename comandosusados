@@ -1,0 +1,14 @@
+Comandos usados 
+Git init
+git branch develop 
+git checkout develop
+git status
+git commit -m "add comandosusados"
+git push -u origin develop
+git flow init
+git flow feature start developfeature
+git add .
+git commit -m "add nova feature"
+git flow publish developfeature
+git flow finish developfeature 
+git push
