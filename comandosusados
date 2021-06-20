@@ -1,0 +1,7 @@
+Comandos usados 
+Git init
+git branch develop 
+git checkout develop
+git status
+git commit -m "add comandosusados"
+git push -u origin develop
