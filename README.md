@@ -6,4 +6,4 @@ Reforçando conceitos de Git com o Workshop de Git pelo Grupo Katie :D
 
 Teste de feature OwO
 
-Testando releases dancinha adicionada
+Testando releases gif adicionado 2
