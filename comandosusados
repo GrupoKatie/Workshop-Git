@@ -5,3 +5,6 @@ git checkout develop
 git status
 git commit -m "add comandosusados"
 git push -u origin develop
+git flow init
+git flow feature start developfeature
+git
