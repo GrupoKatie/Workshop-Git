@@ -6,3 +6,5 @@ Vou modificar
 adiciona feature
 
 adiciona realease 
+
+adiciona hotfix
