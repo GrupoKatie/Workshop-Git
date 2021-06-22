@@ -6,3 +6,5 @@ Novo branch: develop
 New feature
 
 New release
+
+New hotfix
