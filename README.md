@@ -6,3 +6,5 @@ Irei mudar o READE.md
 Agora adicionando nova feature
 
 Agora adicionando novo release
+
+Agora adicionando novo hotfix
