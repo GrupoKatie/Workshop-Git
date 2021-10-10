@@ -1,6 +1,6 @@
-Comandos usados 
+Comandos usados
 Git init
-git branch develop 
+git branch develop
 git checkout develop
 git status
 git commit -m "add comandosusados"
@@ -10,9 +10,9 @@ git flow feature start developfeature
 git add .
 git commit -m "add nova feature"
 git flow publish developfeature
-git flow finish developfeature 
+git flow finish developfeature
 git push
-git flow release start backrelease 
+git flow release start backrelease
 git commit -m "add novo release"
 git flow release publish backrelease
 git flow release finish -m "finalizando release" backrelease
