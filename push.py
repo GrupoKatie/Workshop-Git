@@ -1,1 +1,1 @@
-print('Test push and push request')
+print('lalala')
