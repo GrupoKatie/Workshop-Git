@@ -19,3 +19,6 @@ int main (void){
 }
     printf ("\n");
 }
+
+//Release 1.0.0//
+//Hotfixed 1//
