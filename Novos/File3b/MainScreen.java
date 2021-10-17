@@ -31,6 +31,7 @@ public class MainScreen extends javax.swing.JFrame {
         RegisterBut = new javax.swing.JButton();
         ShowBut = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        AlterBut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -38,14 +39,14 @@ public class MainScreen extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("BEM-VINDO AO NOSSO BANCO DE DADOS");
 
-        RegisterBut.setText("Cadastrar");
+        RegisterBut.setText("Cadastrar Veículo");
         RegisterBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegisterButActionPerformed(evt);
             }
         });
 
-        ShowBut.setText("Consultar");
+        ShowBut.setText("Consultar Dados");
         ShowBut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShowButActionPerformed(evt);
@@ -55,25 +56,34 @@ public class MainScreen extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("O QUE DESEJA FAZER?");
 
+        AlterBut.setText("Alterar Dados");
+        AlterBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlterButActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(462, 462, 462))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(217, 217, 217)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(335, 335, 335)
+                        .addGap(273, 273, 273)
                         .addComponent(RegisterBut)
-                        .addGap(369, 369, 369)
+                        .addGap(146, 146, 146)
+                        .addComponent(AlterBut)
+                        .addGap(150, 150, 150)
                         .addComponent(ShowBut)))
                 .addContainerGap(217, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(462, 462, 462))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,11 +92,12 @@ public class MainScreen extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                .addGap(209, 209, 209)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterBut)
-                    .addComponent(ShowBut))
-                .addGap(230, 230, 230))
+                    .addComponent(ShowBut)
+                    .addComponent(AlterBut))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,6 +114,12 @@ public class MainScreen extends javax.swing.JFrame {
         us.setVisible(true);
         dispose();
     }//GEN-LAST:event_RegisterButActionPerformed
+
+    private void AlterButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlterButActionPerformed
+        EditScreen es = new EditScreen();
+        es.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_AlterButActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,6 +157,7 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AlterBut;
     private javax.swing.JButton RegisterBut;
     private javax.swing.JButton ShowBut;
     private javax.swing.JLabel jLabel1;
