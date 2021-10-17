@@ -70,7 +70,46 @@ public class ShowScreen extends javax.swing.JFrame {
         DataTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         DataTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
                 "ID", "Model", "Brand", "Year"
@@ -178,19 +217,23 @@ public class ShowScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ModelBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModelBoxActionPerformed
+        //dao.clearTable(DataTable);
         dao.showDataModel(ModelBox.getSelectedItem()+"", DataTable);
     }//GEN-LAST:event_ModelBoxActionPerformed
 
     private void BrandBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BrandBoxActionPerformed
-        dao.showDataBrand(ModelBox.getSelectedItem()+"", DataTable);
+        //dao.clearTable(DataTable);
+        dao.showDataBrand(BrandBox.getSelectedItem()+"", DataTable);
     }//GEN-LAST:event_BrandBoxActionPerformed
 
     private void YearBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YearBoxActionPerformed
+        //dao.clearTable(DataTable);
         dao.showDataYear(YearBox.getSelectedItem()+"", DataTable);
     }//GEN-LAST:event_YearBoxActionPerformed
 
     private void AllButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AllButActionPerformed
-        dao.showAll2(DataTable);
+        dao.clearTable(DataTable);
+        dao.showAll(DataTable);
     }//GEN-LAST:event_AllButActionPerformed
 
     private void ReturnButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnButActionPerformed
