@@ -1,0 +1,29 @@
+SELECT
+	(SUM(IFNULL(`T`.`Creditos`, 0)) - SUM(IFNULL(`T`.`Despesa`, 0))) AS `Saldo`,
+    `T`.`ID`
+    FROM(
+SELECT 
+	`DT`.`Despesa`,
+    `CT`.`Creditos`,
+    `CT`.`ID`
+ FROM(
+	(SELECT SUM(`Valor`) AS `Creditos`, `ID`
+		FROM(
+			SELECT `pc`.`amount` AS `Valor`, `gen`.`restaurant_sig_person_id` AS `ID`
+				FROM `tidigital`.`restaurant_payment_credits` AS `pc`, `tidigital`.`restaurant_grus_generated` AS `gen`
+					WHERE `gen`.`id` = `pc`.`gru_generated_id`
+			UNION
+			SELECT `pt`.`amount` AS `Valor`, `pt`.`receiver_id` AS `ID`
+				FROM `tidigital`.`restaurant_transfer` AS `pt`) `c`
+					GROUP BY `ID`) AS `CT`
+				INNER JOIN
+			(SELECT SUM(`Valor`) AS `Despesa`, `ID`
+				FROM(
+			SELECT `pd`.`amount` AS `Valor`, `pd`.`restaurant_sig_person_id` AS `ID`
+				FROM `tidigital`.`restaurant_payment_debits` AS `pd`
+				UNION
+				SELECT `pt`.`amount` AS `Valor`, `pt`.`sender_id` AS `ID`
+					FROM `tidigital`.`restaurant_transfer` AS `pt`) `d`
+				GROUP BY `ID`) AS `DT` )
+                WHERE `DT`.`ID` = `CT`.`ID`) AS T
+			GROUP BY `T`.`ID`;
