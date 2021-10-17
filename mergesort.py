@@ -27,6 +27,7 @@ def mergeSort(arr):
 			k += 1
 
 		# Checking if any element was left
+		
 		while i < len(L):
 			arr[k] = L[i]
 			i += 1
