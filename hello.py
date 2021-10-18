@@ -1,2 +1,3 @@
-print('Hello World')
-print('Testando o push')
+print('Olha a nova 2 feature aqui gente!')
+print('Olha a nova 2 feature aqui gente!')
+print('hotfix 0.1.0')
