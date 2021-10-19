@@ -100,7 +100,7 @@ while True:
 
 	if head.xcor() == food.xcor() and head.ycor() == food.ycor():
 		has_food = 0
-		food.color('white')
+		food.color('blue')
 		snake.append(food)
 
 	last = snake.pop()
