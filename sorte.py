@@ -4,7 +4,7 @@ print("Vamo ve se tu é sortudo")
 
 num = random.randint(1, 10)
 
-print("\n[soph hacker o numero eh esse: ", num, "]")
+print("\n[soph hacker o numero eh esse: ", num, "]\n (esse nn eh o numero)")
 
 test = int(input("\ndigite um numero de 1 a 10:\n"))
 
