@@ -7,7 +7,7 @@ def add_sqr(x, y):
 	sqr = turtle.Turtle()
 	sqr.speed(0)
 	sqr.shape('square')
-	sqr.color('white')
+	sqr.color('blue')
 	sqr.penup()
 	sqr.goto(x, y)
 	sqr.dx = 20
